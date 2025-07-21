@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ders9.css">
+</head>
+<body>
+   <div style="display: flex; gap: 20px;">
+  <div id="genelCerceve" style="width: 50%;">
+    <div id="mesajGirisi">
+      <img src="images/gunbatimi.jpg" alt="Ayhan Hoca" />
+      <input type="text" id="mesaj1" placeholder="Mesaj yaz..." />
+      <input type="button" value="Mesaj Gönder" onclick="mesajGonder(1)" />
+    </div>
+    <hr />
+    <div id="mesajKutulari1"></div>
+  </div> 
+
+  <div id="genelCerceve" style="width: 50%;">
+    <div id="mesajGirisi">
+      <img src="images/kumsal.jpg" alt="Şevket" />
+      <input type="text" id="mesaj2" placeholder="Mesaj yaz..." />
+      <input type="button" value="Mesaj Gönder" onclick="mesajGonder(2)" />
+    </div>
+    <hr />
+    <div id="mesajKutulari2"></div>
+  </div>
+</div>
+
+    
+    <script src="mesaj.js" defer></script>
+</body>
+</html>

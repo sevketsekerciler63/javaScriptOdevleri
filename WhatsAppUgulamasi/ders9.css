@@ -1,0 +1,118 @@
+#genelCerceve {
+  background-color: lightblue;
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#mesajGirisi {
+  background-color: rgb(109, 31, 31);
+  border-radius: 10px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#mesajGirisi > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#mesajGirisi > input[type="text"] {
+  flex-grow: 1;
+  height: 35px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+#mesajGirisi > input[type="button"] {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  background-color: #25d366;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#mesajKutulari1, #mesajKutulari2 {
+  background-color: white;
+  border-radius: 3px;
+  height: 400px;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Mesaj baloncuğu */
+.mesaj {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  word-wrap: break-word;
+}
+
+/* Gönderen mesajı (sağda yeşil) */
+.gonderen {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+
+/* Tarih küçük ve sağ altta */
+.tarih {
+  font-size: 11px;
+  color: gray;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}.mesaj {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  padding-right: 50px; /* saat için boşluk */
+}
+
+/* Sağdaki mesajlar */
+.gonderen {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+
+/* Soldaki mesajlar */
+.alan {
+  background-color: white;
+  border: 1px solid #ddd;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+}
+
+/* Saat */
+.tarih {
+  font-size: 11px;
+  color: gray;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
