@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim</title>
+  <script type="application/javascript">
+    function veriKontrol() {
+      var ad = document.getElementById("ad");
+      var soyad = document.getElementById("soyad");
+      var email = document.getElementById("email");
+      var telefon = document.getElementById("telefon");
+      var mesaj = document.getElementById("mesaj");
+
+      if (ad.value == "") {
+        alert("Lütfen adınızı giriniz.");
+        ad.focus();
+        return false;
+      }
+
+      if (soyad.value == "") {
+        alert("Lütfen soyadınızı giriniz.");
+        soyad.focus();
+        return false;
+      }
+
+      if (email.value == "") {
+        alert("Lütfen e-posta adresinizi giriniz.");
+        email.focus();
+        return false;
+      }
+
+      if (telefon.value == "") {
+        alert("Lütfen telefon numaranızı giriniz.");
+        telefon.focus();
+        return false;
+      }
+
+      if (mesaj.value == "") {
+        alert("Lütfen mesajınızı yazınız.");
+        mesaj.focus();
+        return false;
+      }
+
+      alert("Form başarıyla gönderildi.");
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+  <h1>İletişim Bilgileri</h1>
+
+  <form onsubmit="return veriKontrol()">
+    <label for="ad">Ad:</label><br>
+    <input type="text" id="ad" name="ad"><br><br>
+
+    <label for="soyad">Soyad:</label><br>
+    <input type="text" id="soyad" name="soyad"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br><br>
+
+    <label for="telefon">Telefon:</label><br>
+    <input type="text" id="telefon" name="telefon"><br><br>
+
+    <label for="mesaj">Mesaj:</label><br>
+    <textarea id="mesaj" name="mesaj" rows="4" cols="30"></textarea><br><br>
+
+    <input type="submit" value="Gönder">
+    <input type="reset" value="Temizle">
+  </form>
+
+</body>
+</html>
