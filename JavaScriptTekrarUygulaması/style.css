@@ -1,0 +1,221 @@
+/* Body marginini biraz azaltıp tam kenar yapalım */
+body {
+  margin: 0;
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee; /* Koyu arka planda okunabilirlik için açık renk yazı */
+}
+
+/* #home bölümündeki margin negatif kaldırıldı, padding tam ortalandı */
+#home {
+  background-color: #483355;
+  padding: 2cm 2cm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Küçük ekranlarda alt satıra geçmesi için */
+  gap: 15px;
+}
+
+/* header daha esnek */
+header {
+  font-size: 2.2rem;
+  color: #f0eaf5;
+  font-weight: 700;
+  flex-grow: 1;
+}
+
+/* Navbar container flex wrap eklendi */
+.topdiv {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Menü butonları biraz daha hafif padding */
+.topmenu {
+  color: lightgray;
+  background-color: #5d4371;
+  padding: 8px 18px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 1px solid #776089;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover efekti iyileştirildi */
+.topmenu:hover {
+  color: white;
+  font-weight: 700;
+  background-color: #382742;
+  text-decoration: underline;
+}
+
+/* Dönüşüm kartlarını responsive grid ile ayarladım */
+#all-conversion-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Kartlar içi padding arttırıldı, gölge yumuşatıldı */
+.b {
+  background-color: #fff;
+  border-radius: 12px;
+  border-top-width: 20px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  padding: 25px 30px;
+  gap: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Renkli üst şeritler */
+.temperature {
+  border-top: 20px solid #28a745;
+}
+
+.weight {
+  border-top: 20px solid #ff7f50;
+}
+
+.distance {
+  border-top: 20px solid #00bcd4;
+}
+
+/* Figure stilinde yazı rengi biraz koyu */
+figure {
+  width: 200px;
+  margin: 0;
+  text-align: center;
+  color: #222;
+}
+
+figure img {
+  width: 100%;
+  max-width: 160px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Figcaption biraz daha okunaklı */
+figcaption {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Butonlar biraz büyük ve yuvarlak */
+button {
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* Inputlar daha geniş ve kontrastlı */
+input[type="number"] {
+  font-size: 18px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 160px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Legend başlıkları */
+legend {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Aside açıklamalar */
+aside {
+  font-size: 14px;
+  color: #666;
+  margin-top: 12px;
+  max-width: 300px;
+}
+
+/* Ana sayfa ikonu sabit pozisyon */
+.iconbutton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e1ebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.iconbutton:hover {
+  background-color: #c5d4d4;
+}
+
+.iconbutton img {
+  width: 28px;
+  pointer-events: none;
+}
+
+/* Footer */
+footer {
+  background-color: #f0eaf5;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 14px;
+  margin-top: 40px;
+  color: #333;
+  user-select: none;
+}
+
+/* Responsive küçük ekranlar için */
+@media (max-width: 700px) {
+  #home {
+    flex-direction: column;
+    padding: 1.5cm 1cm;
+    gap: 15px;
+  }
+  .b {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+  }
+  figure {
+    width: 100%;
+  }
+  aside {
+    max-width: 100%;
+  }
+}

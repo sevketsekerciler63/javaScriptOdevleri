@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+      <title>Belge</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <section id="home">
+        <header>
+          Birim Dönüşümleri
+        </header>
+        <nav>
+          <div class="topdiv">
+            <a href="#temperature"><button  class="topmenu">Sıcaklık</button></a>
+            <a href="#weight"><button  class="topmenu">Ağırlık</button></a>
+            <a href="#distance"><button  class="topmenu">Mesafe</button></a>
+          </div>
+        </nav>
+      </section>    
+      <div style="clear:both;"></div>
+     
+      <div id="all-conversion-sections">
+
+        <section id="temperature"  class="b temperature">
+          <div id="tmp">
+            <figure>
+              <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="150px"/>
+              <figcaption>Celcius'tan Fahrenheit'a Dönüşüm</figcaption>
+            </figure>
+            <article> 
+
+              <fieldset>
+                <legend>Sıcaklık</legend>
+                <label for="Temperature">Santigrat</label> <br/>
+
+                <input type="number" id="c">
+                <button id="convert-temp">Dönüştür</button>
+                <input type="number" id="f">
+                <label for="Temperature">Fahrenheit</label>
+              </fieldset>
+              <aside>
+                Santigratı Fahrenheit'a kendiniz dönüştürmek için, sıcaklık değerinizin yerine `C` koyarak şu formülü kullanabilirsiniz: (C × 9/5) + 32
+              </aside>
+            </article>
+          </div>
+        </section>
+
+        <div style="clear:both;"></div>
+      
+        <section id="weight"  class="b weight">          
+          <div id="wgt">
+            <figure>
+              <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png"  width="150px"/>
+              <figcaption>Kilogramdan Paunda Dönüşüm</figcaption>
+            </figure>
+            <article>
+              <fieldset>
+                <legend>Ağırlık</legend>
+                <label for="Weight">KG</label> <br/>
+
+                <input type="number" id="kg">
+                <button id="convert-weight">Dönüştür</button>
+                <input type="number" id="lb">
+
+                <label for="Weight">Pound</label>    
+              </fieldset>
+              <aside>
+                Kilogramı pounda kendiniz dönüştürmek için, kilogram değerinizin yerine `kg` koyarak şu formülü kullanabilirsiniz: kg x 2.205
+              </aside>      
+            </article>
+          </div>
+        </section>
+
+        <div style="clear:both;"></div>
+
+        <section id="distance"  class="b distance">
+          <div id="dst">
+            <figure>
+              <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png"  width="150px"/>
+              <figcaption>Kilometreden Mile Dönüşüm</figcaption>
+            </figure>
+            <article>
+              <fieldset>
+                <legend>Mesafe</legend>
+                  <label for="Distance">KM</label> <br/>
+
+                  <input type="number" id="km">
+                  <button id="convert-distance">Dönüştür</button>
+                  <input type="number" id="mile">
+
+                  <label for="Distance">Mil</label>
+              </fieldset>
+              <aside>
+                Kilometreyi mile kendiniz dönüştürmek için, mesafe değerinizin yerine `km` koyarak şu formülü kullanabilirsiniz: km ÷ 1.609
+              </aside>
+            </article>
+          </div>
+        </section>
+        <div style="clear:both;"></div>
+
+      </div>
+
+    <div id="go-home" class="iconbutton">
+      <a href="#home">
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg"/>
+      </a>
+    </div>
+
+    <footer>IBM Fullstack Bulut Geliştirici Sertifikası kapsamında HTML ve CSS hakkında daha fazla bilgi edinin</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
