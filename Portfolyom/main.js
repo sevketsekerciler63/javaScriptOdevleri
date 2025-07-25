@@ -227,3 +227,40 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+document.addEventListener("DOMContentLoaded", function () {
+  const skillList = document.querySelector("#skills .skills-content") || document.querySelector(".skills-content");
+
+  document.getElementById("add-skill-btn").addEventListener("click", function () {
+    const skillName = prompt("Yeni yeteneğin adı nedir?");
+    if (!skillName || skillName.trim() === "") {
+      alert("Yetenek adı boş olamaz kral!");
+      return;
+    }
+
+    let skillLevel = prompt("Bu yetenekte ne kadar iyisin? (0-100)");
+    skillLevel = parseInt(skillLevel);
+
+    if (isNaN(skillLevel) || skillLevel < 0 || skillLevel > 100) {
+      alert("0 ile 100 arasında geçerli bir sayı girmen lazım.");
+      return;
+    }
+
+    const skillHTML = `
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="progress">
+          <span class="skill">${skillName} <i class="val">${skillLevel}%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" style="width: ${skillLevel}%;" aria-valuenow="${skillLevel}" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    if (skillList) {
+      skillList.insertAdjacentHTML("beforeend", skillHTML);
+      AOS.init(); // Animasyonları yeniden çalıştır
+    } else {
+      alert("Yetenekler bölümü bulunamadı kral.");
+    }
+  });
+});
